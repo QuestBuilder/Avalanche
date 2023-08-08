@@ -1,0 +1,36 @@
+Date: 2018.10.22
+Time: 22:11:29
+Team Name: null
+Players: 0
+0;Baloon;0;true;
+1;Press;0;true;
+2;Gate;0;true;
+3;Poseidon;0;true;
+4;Trident;0;true;
+5;Demetra-1;0;true;
+6;Rain;0;true;
+7;Vine;0;true;
+8;Dionis-1;0;true;
+9;Hercules;0;true;
+10;Narcis;0;true;
+11;Thunder;0;true;
+12;Afina-1;0;true;
+13;Afina-2;0;true;
+14;Time;0;true;
+15;Octopus;0;true;
+16;Note;0;true;
+17;Wind;0;true;
+18;Ghera-1;0;true;
+19;Fire;0;true;
+20;Flower-1;0;true;
+21;Flower-2;0;true;
+22;Arpha;0;true;
+23;Dionis-2;0;true;
+24;Ghera-2;0;true;
+25;Under;0;true;
+26;Zodiak;0;true;
+27;Minot;0;true;
+28;Gorgona;0;true;
+29;Cristals;0;true;
+30;Light;0;true;
+31;End;0;true;
