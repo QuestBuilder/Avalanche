@@ -69,7 +69,6 @@ byte knockSnd = 48;  // first door knock fx
 byte lastLite = 50;  // 100V SSR
 byte UVlight  = 52;  // 110V SSR
 
-
 //  gadgets - PROPS
 //               A   B    C    D    E    F    G    H   I   J   K    L   M   N   O   P
 byte insA[16] = { A8, A9, A10, A11, A12, A13, A14, A15, 53, 51, 49, 47, 31, 29, 27, 25 };
