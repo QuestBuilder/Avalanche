@@ -48,7 +48,6 @@ if ( digitalRead(led)==LOW ) digitalWrite(led,HIGH); else digitalWrite(led,LOW);
   getBridgeData(); // На время тестов отключу прием данных от моста
 
   chknivel();
-
 }
 
 void sendHLms(int _pin, unsigned long _delay)

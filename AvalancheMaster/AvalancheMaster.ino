@@ -25,13 +25,14 @@
 #define CAPSULE2  12
 #define CENTRF    13
 #define OBELIS    14  // Cave 1
-#define STOP      15    // Cave 2
+#define STOP      15  // Cave 2
 #define HANDS     16
 #define LIGHT     17
 #define CASSE     18
 #define LETER     19
 #define DEFIB     20
-#define GCOUNT    21 // 
+
+#define GCOUNT    21
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // 0x27, 0x3F
 
@@ -52,7 +53,7 @@ int incomingByte;
 byte ins[11]  = { 2, 3, 4, 5, 6, 7, 22, 24, 26, 28, 38 };
 
 byte StartBut = 2;  // Start Button - B7
-byte frzsSen  = 3;  // freezer code panel  -
+byte frzsSen  = 3;  // freezer code panel
 byte fireSen  = 4;  // fireplace door sensor  - B10
 byte capsuMv  = 5;  // capsule move sensor
 byte movSen   = 7;  // movement sensor Dark Room - B30
@@ -72,7 +73,7 @@ byte UVlight  = 52;  // 110V SSR
 //  gadgets - PROPS
 //               A   B    C    D    E    F    G    H   I   J   K    L   M   N   O   P
 byte insA[16] = { A8, A9, A10, A11, A12, A13, A14, A15, 53, 51, 49, 47, 31, 29, 27, 25 };
-byte outA[16] = { A0, A1, A2, A3, A4, A5, A6,  15,  45, 43, 41, 39, 37, 35, 33, 14     };
+byte outA[16] = { A0, A1, A2,   A3, A4,   A5,  A6,  15, 45, 43, 41, 39, 37, 35, 33, 14 };
 
 byte propAin  = A8;  // DEFIBRA
 byte propAout = A0;
@@ -146,7 +147,7 @@ unsigned long pass_times[GCOUNT];
 //                                       0    1    2    3    4    5      6      7     8     9    10    11    12    13    14     15    16    17    18    19    20
 unsigned long post_delays1[GCOUNT] = { 101, 102, 103, 104, 4105, 106,   107,  1008, 1009, 1010, 111,  1012, 1013, 4014, 2115,25000, 1117, 1118, 1119, 1120,  221 };
 unsigned long post_delays2[GCOUNT] = { 101, 102, 103, 104, 4105, 106,   107,  5008, 1009, 1110, 111,  1012, 4013, 2114, 3115, 1116, 1117, 1118, 1119, 1120, 3121 };
-unsigned long done_starts[GCOUNT];
+// unsigned long done_starts[GCOUNT];
 
 int rev = 0;
 long howLong = 0;

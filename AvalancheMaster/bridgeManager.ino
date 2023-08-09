@@ -131,7 +131,7 @@ void resetStates()
     oper_skips[i] = false;
     gadget_states[i] = 0;
     pass_times[i] = 0;
-    done_starts[i] = 0;
+    // done_starts[i] = 0;
   }
   gameTime = 0;
   game = false;

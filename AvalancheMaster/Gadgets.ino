@@ -440,7 +440,7 @@ void checkCapsule3() {  // MOTION SENSOR INSIDE CAVE
 
 
 void checkCapsule4() {  // OPENS CAVE DOOR
-  if (!digitalRead(propFin) && capsule_addons[0] && !capsule_addons[1 && millis() - capsule3_start > 1000]) {
+  if (!digitalRead(propFin) && capsule_addons[0] && !capsule_addons[1] && millis() - capsule3_start > 1000) {
     capsule_addons[1] = true;
     Serial.println("CAPSULE 4 SIGNAL. cave door opened");
     relay22.write(7, LOW);    // labyr last door CLOSE
