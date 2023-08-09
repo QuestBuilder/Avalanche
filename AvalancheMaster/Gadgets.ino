@@ -525,8 +525,6 @@ void checkStop() {
   }
   if (gadget_states[STOP] == 3 && pass_times[STOP] == 0) // Motor started   // 25FEB added (.. < 3)
   {
-    Serial.println("STOP == 3 and passTimes == 0");
-    delay(1000);
     if (!digitalRead(motorIn) || oper_skips[STOP]) // in any case
     {
       digitalWrite(motorOut, LOW);  // Motor Off
