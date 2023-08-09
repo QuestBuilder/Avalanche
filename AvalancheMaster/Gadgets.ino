@@ -535,10 +535,12 @@ void checkStop() {
       nextEvent = millis() + 5000;
 
       if (oper_skips[STOP]) Serial.println("STOP Done by Skip");
-      else Serial.println("STOP Done (MotorIn)");
-
+      else 
+      {
+        Serial.println("STOP Done (MotorIn)");
+        sendGadgetPassed(STOP);
+      }
       pass_times[STOP] = millis();
-      sendGadgetPassed(STOP);
     }
   }
 }
