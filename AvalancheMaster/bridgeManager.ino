@@ -46,7 +46,6 @@ void sendGadgetPassed(int gadget_index) // Проверяем прошел ли 
   delay(10);
   Serial1.write(0xAD);
   delay(15);
-  Serial.print("GADGET_SEND:");
   lcd.setCursor(0, 1);
   lcd.print("GSend:");
   for (int s = 0; s < GCOUNT; s++)
@@ -55,18 +54,13 @@ void sendGadgetPassed(int gadget_index) // Проверяем прошел ли 
     {
       Serial1.write(0x02);
       lcd.print(String(s));
-    //  Serial.print("(" + String(gadget_states[s]) + ")|");
+      Serial.println("GADGET: " + String(s) + " :: SEND STATE: " + String(gadget_states[s]));
     }
-    else
-    {
-      Serial1.write(0x01);
-    //  Serial.print(String(gadget_states[s]) + "|");
-    }
-    delay(7);  //was 7
+    else Serial1.write(0x01);
+    delay(7);
   }
   lcd.print(" ");
   Serial1.write(0xFF);
-  Serial.println();
   delay(25);  //was 25 before , later was 10 till feb 25, 
   digitalWrite(RSTXCNTRL, LOW);  // Stop Transmitter
   digitalWrite(REPIN, LOW);
