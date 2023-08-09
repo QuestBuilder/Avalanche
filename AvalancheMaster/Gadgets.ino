@@ -487,7 +487,6 @@ void checkObelis() {
     if (oper_skips[OBELIS] || !digitalRead(propEin)) {
       gadget_states[OBELIS] = 1;
       MP3B.play(22);
-
       sendHLms(caveLitA, 200);  //cave animation shift
 
       Serial.println("OBELIS Timer START by " + String(oper_skips[OBELIS] ? "Operator" : "Player"));

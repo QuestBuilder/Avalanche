@@ -202,7 +202,7 @@ void setup() {
   lcd.init();
   lcd.backlight();
   lcd.setCursor(0, 0);
-  lcd.print("Avalanche v4.9 ");
+  lcd.print("Avalanche v 5.1 ");
   lcd.setCursor(0, 1);
   lcd.print(" Setup Complete ");
 
@@ -240,6 +240,14 @@ void setup() {
     pinMode(insA[x], INPUT_PULLUP);
     pinMode(outA[x], OUTPUT);
     digitalWrite(outA[x], LOW);
+  }
+  
+  // gadget settings
+  for (int x = 0; x < GCOUNT; x++)  // PROPS INs and OUTs
+  {
+    pass_times[x] = 0;
+    gadget_states[x] = 0;
+    oper_skips[x] = false;
   }
 
   delay(500);
