@@ -519,6 +519,7 @@ void checkStop() {
   if (gadget_states[STOP] == 0 && gadget_states[OBELIS] > 2 && !digitalRead(propEin)) {
     Serial.println("STOP Done by Skip / motor on");
     MP3B.play(23); // CAVE VICTORY SOUND
+    delay(1000);
     sendHLms(caveLitA, 200);  //cave animation shift
     sendHLms(propNout, 200); // PC shift to GT OUT OF HERE
     gadget_states[STOP] = 3;
