@@ -525,6 +525,8 @@ void checkStop() {
   }
   if (gadget_states[STOP] == 3 && pass_times[STOP] == 0) // Motor started   // 25FEB added (.. < 3)
   {
+    Serial.println("STOP == 3 and passTimes == 0");
+    delay(1000);
     if (!digitalRead(motorIn) || oper_skips[STOP]) // in any case
     {
       digitalWrite(motorOut, LOW);  // Motor Off
@@ -534,10 +536,10 @@ void checkStop() {
       nivel = 20;
       nextEvent = millis() + 5000;
 
-      if (oper_skips[STOP]) Serial.println("STOP Done by Skip");
-      else 
+      if (oper_skips[STOP]) Serial.println("STOP SKIP Done");
+      else
       {
-        Serial.println("STOP Done (MotorIn)");
+        Serial.println("STOP NOT SKIP Done (MotorIn)");
         sendGadgetPassed(STOP);
       }
       pass_times[STOP] = millis();
